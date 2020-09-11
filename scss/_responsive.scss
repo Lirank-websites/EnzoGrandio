@@ -1,0 +1,87 @@
+@media (max-width: 1450px) and (min-width: 768px) {
+    header {
+        padding-right: 25px;
+        padding-left: 25px;
+        div:first-child {
+            h1 {
+                margin-right: 20px;
+            }
+        }
+
+        div:last-child {
+            h2 {
+                font-size: 2rem;
+                font-weight: normal;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    main {
+        padding: 100px 25px 100px 25px;
+    }
+}
+
+@media (max-width: 990px) {
+    header {
+        padding: 100px 25px 100px 25px;
+        div:first-child {
+            h1 {
+                font-weight: bold;
+                margin: 0;
+                margin-top: 20px;
+                font-size: 81px;
+                line-height: 73px;
+            }
+        }
+        div:last-child {
+            h2 {
+                color: #f8f9fa;
+                font-size: 1.25rem;
+                font-weight: normal;
+                margin-top: 2rem;
+                margin-bottom: 1.5rem;
+                padding-bottom: 1rem;
+            }
+            p {
+                font-size: 1.4rem;
+                color: #edf2f7;
+            }
+        }
+    }
+
+    main {
+        padding: 100px 25px 100px 25px;
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 80px;
+            color: #ebf8ff;
+
+            span {
+                display: block;
+                margin-top: 0.5rem;
+                font-size: 1.9rem;
+                color: white;
+            }
+        }
+    }
+    footer {
+        padding: 7rem 25px 9rem 25px;
+        h4 {
+            font-size: 2rem;
+            max-width: 300px;
+            font-weight: 500;
+            margin: 0 auto;
+            margin-bottom: 0.5em;
+        }
+        .email {
+            font-size: 1.3rem;
+            max-width: 100%;
+        }
+        .social-icons {
+            svg {
+                max-width: 1.5rem;
+            }
+        }
+    }
+}

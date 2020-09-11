@@ -1,0 +1,231 @@
+$darkGrey: #252734;
+$lightGrey: #333646;
+
+@mixin container {
+    max-width: 1380px;
+    margin: auto;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+ul {
+    list-style: none;
+}
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+img,
+video {
+    height: auto;
+    max-width: 100%;
+}
+iframe {
+    border: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td,
+th {
+    padding: 0;
+}
+td:not([align]),
+th:not([align]) {
+    text-align: left;
+}
+
+body {
+    background-color: $darkGrey;
+    color: white;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 150px 0 150px 0;
+    @include container();
+    div:first-child {
+        h1 {
+            font-weight: 700;
+            margin: 0;
+            margin-top: 20px;
+            font-size: 81px;
+            line-height: 73px;
+        }
+    }
+    div:last-child {
+        max-width: 610px;
+        h2 {
+            color: #f8f9fa;
+            font-size: 34px;
+            font-weight: normal;
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 2px solid #4a4e68;
+        }
+        p {
+            font-size: 26px;
+            color: #edf2f7;
+        }
+    }
+}
+
+main {
+    padding: 120px 0 130px 0;
+    background-color: $lightGrey;
+    h3 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 80px;
+        span {
+            color: #ebf8ff;
+        }
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: 25px;
+        row-gap: 25px;
+        justify-items: stretch;
+
+        @include container();
+        &__item {
+            @for $i from 1 through 20 {
+                &--#{$i} {
+                    background: url("../img/#{$i}.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    background-color: #424657;
+                }
+            }
+            filter: saturate(1.8);
+            filter: contrast(1.2);
+            transition: 0.2s ease-in-out;
+
+            border-radius: 6px;
+            height: 250px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            &:hover {
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+                    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                filter: brightness(1);
+                filter: saturate(1.5);
+                filter: contrast(1.3);
+                transform: translate(0, -7px);
+            }
+        }
+    }
+}
+
+footer {
+    @include container();
+    padding: 10rem 0 12rem 0;
+    text-align: center;
+    h5 {
+        color: hsl(233, 16%, 41%);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    h4 {
+        margin-top: 0.4rem;
+        margin-bottom: 0.5em;
+        font-weight: 500;
+        color: #edf2f7;
+        font-size: 2.5rem;
+    }
+    .email {
+        font-weight: normal;
+        display: inline-block;
+        margin: 1rem auto;
+        font-size: 2rem;
+        color: #ffffff;
+        padding: 1rem 3rem;
+        background: hsla(231, 16%, 24%, 0.5);
+        border-radius: 5px;
+    }
+    .social-icons {
+        max-width: 20rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        svg {
+            max-width: 1.6rem;
+        }
+
+        &__item {
+            padding: 0.7em 2em;
+            margin: 0.5em;
+            border-radius: 0.2rem;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                transform: translate(0, -5px);
+            }
+            &--twitter {
+                background: hsla(203, 89%, 53%, 0.1);
+                fill: #1da1f2;
+            }
+            &--behance {
+                background: hsla(219, 100%, 55%, 0.1);
+                fill: #1769ff;
+            }
+            &--dribbble {
+                background: rgba(234, 76, 137, 0.1);
+                fill: #ea4c89;
+            }
+        }
+    }
+}
+
+@import "responsive";

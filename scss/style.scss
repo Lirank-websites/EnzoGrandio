@@ -1,5 +1,5 @@
-$darkGrey: #252734;
-$lightGrey: #333646;
+$darkGrey: #2c2c2c;
+$lightGrey: #303030;
 
 @mixin container {
     max-width: 1380px;
@@ -108,7 +108,7 @@ header {
             font-weight: normal;
             margin-bottom: 32px;
             padding-bottom: 32px;
-            border-bottom: 2px solid #4a4e68;
+            border-bottom: 2px solid #3b3b3b;
         }
         p {
             font-size: 26px;
@@ -125,7 +125,7 @@ main {
         text-align: center;
         margin-bottom: 80px;
         span {
-            color: #ebf8ff;
+            color: #bebebe;
         }
     }
 
@@ -145,7 +145,7 @@ main {
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
-                    background-color: #424657;
+                    background-color: #495057;
                 }
             }
             filter: saturate(1.8);
@@ -191,7 +191,7 @@ footer {
         font-size: 2rem;
         color: #ffffff;
         padding: 1rem 3rem;
-        background: hsla(231, 16%, 24%, 0.5);
+        background: rgba(63, 63, 63, 0.445);
         border-radius: 5px;
     }
     .social-icons {
